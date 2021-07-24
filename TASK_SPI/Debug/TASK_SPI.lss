@@ -1,0 +1,1718 @@
+
+TASK_SPI.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000670  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000010  00800060  00000670  00000704  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000002  00800070  00800070  00000714  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000714  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000744  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000100  00000000  00000000  00000780  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000f7b  00000000  00000000  00000880  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000902  00000000  00000000  000017fb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000013f4  00000000  00000000  000020fd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001d0  00000000  00000000  000034f4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000567  00000000  00000000  000036c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000053d  00000000  00000000  00003c2b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a8  00000000  00000000  00004168  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 4a 00 	jmp	0x94	; 0x94 <__ctors_end>
+   4:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+   8:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+   c:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  10:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  14:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  18:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  1c:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  20:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  24:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  28:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  2c:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  30:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  34:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  38:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  3c:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  40:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  44:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  48:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  4c:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  50:	0c 94 67 00 	jmp	0xce	; 0xce <__bad_interrupt>
+  54:	9f 00       	.word	0x009f	; ????
+  56:	b0 00       	.word	0x00b0	; ????
+  58:	c1 00       	.word	0x00c1	; ????
+  5a:	d2 00       	.word	0x00d2	; ????
+  5c:	e3 00       	.word	0x00e3	; ????
+  5e:	f4 00       	.word	0x00f4	; ????
+  60:	05 01       	movw	r0, r10
+  62:	16 01       	movw	r2, r12
+  64:	27 01       	movw	r4, r14
+  66:	39 01       	movw	r6, r18
+  68:	4a 01       	movw	r8, r20
+  6a:	5b 01       	movw	r10, r22
+  6c:	6c 01       	movw	r12, r24
+  6e:	7d 01       	movw	r14, r26
+  70:	8e 01       	movw	r16, r28
+  72:	9f 01       	movw	r18, r30
+  74:	b0 01       	movw	r22, r0
+  76:	c1 01       	movw	r24, r2
+  78:	d2 01       	movw	r26, r4
+  7a:	e3 01       	movw	r28, r6
+  7c:	f4 01       	movw	r30, r8
+  7e:	05 02       	muls	r16, r21
+  80:	16 02       	muls	r17, r22
+  82:	27 02       	muls	r18, r23
+  84:	2c 02       	muls	r18, r28
+  86:	3d 02       	muls	r19, r29
+  88:	4e 02       	muls	r20, r30
+  8a:	5f 02       	muls	r21, r31
+  8c:	70 02       	muls	r23, r16
+  8e:	81 02       	muls	r24, r17
+  90:	92 02       	muls	r25, r18
+  92:	a3 02       	muls	r26, r19
+
+00000094 <__ctors_end>:
+  94:	11 24       	eor	r1, r1
+  96:	1f be       	out	0x3f, r1	; 63
+  98:	cf e5       	ldi	r28, 0x5F	; 95
+  9a:	d8 e0       	ldi	r29, 0x08	; 8
+  9c:	de bf       	out	0x3e, r29	; 62
+  9e:	cd bf       	out	0x3d, r28	; 61
+
+000000a0 <__do_copy_data>:
+  a0:	10 e0       	ldi	r17, 0x00	; 0
+  a2:	a0 e6       	ldi	r26, 0x60	; 96
+  a4:	b0 e0       	ldi	r27, 0x00	; 0
+  a6:	e0 e7       	ldi	r30, 0x70	; 112
+  a8:	f6 e0       	ldi	r31, 0x06	; 6
+  aa:	02 c0       	rjmp	.+4      	; 0xb0 <__do_copy_data+0x10>
+  ac:	05 90       	lpm	r0, Z+
+  ae:	0d 92       	st	X+, r0
+  b0:	a0 37       	cpi	r26, 0x70	; 112
+  b2:	b1 07       	cpc	r27, r17
+  b4:	d9 f7       	brne	.-10     	; 0xac <__do_copy_data+0xc>
+
+000000b6 <__do_clear_bss>:
+  b6:	20 e0       	ldi	r18, 0x00	; 0
+  b8:	a0 e7       	ldi	r26, 0x70	; 112
+  ba:	b0 e0       	ldi	r27, 0x00	; 0
+  bc:	01 c0       	rjmp	.+2      	; 0xc0 <.do_clear_bss_start>
+
+000000be <.do_clear_bss_loop>:
+  be:	1d 92       	st	X+, r1
+
+000000c0 <.do_clear_bss_start>:
+  c0:	a2 37       	cpi	r26, 0x72	; 114
+  c2:	b2 07       	cpc	r27, r18
+  c4:	e1 f7       	brne	.-8      	; 0xbe <.do_clear_bss_loop>
+  c6:	0e 94 69 00 	call	0xd2	; 0xd2 <main>
+  ca:	0c 94 36 03 	jmp	0x66c	; 0x66c <_exit>
+
+000000ce <__bad_interrupt>:
+  ce:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000d2 <main>:
+ */ 
+#include "../MCAL/UART/UART.h"
+#include "../MCAL/SPI/SPI_Master.h"
+
+int main(void)
+{
+  d2:	cf 93       	push	r28
+  d4:	df 93       	push	r29
+  d6:	00 d0       	rcall	.+0      	; 0xd8 <main+0x6>
+  d8:	cd b7       	in	r28, 0x3d	; 61
+  da:	de b7       	in	r29, 0x3e	; 62
+    UART_Init();
+  dc:	0e 94 de 02 	call	0x5bc	; 0x5bc <UART_Init>
+	SPI_MasterInit();
+  e0:	0e 94 bc 02 	call	0x578	; 0x578 <SPI_MasterInit>
+
+
+    while (1) 
+    {
+//	DIO_Write(4,HIGH);	
+	UART_ReceiveString(x1,MAX_LEN);
+  e4:	6f ef       	ldi	r22, 0xFF	; 255
+  e6:	80 e0       	ldi	r24, 0x00	; 0
+  e8:	90 e0       	ldi	r25, 0x00	; 0
+  ea:	0e 94 07 03 	call	0x60e	; 0x60e <UART_ReceiveString>
+	//DIO_Write(4,HIGH);
+	volatile uint16_t i;
+	for(i=0;i<10000;i++)
+  ee:	1a 82       	std	Y+2, r1	; 0x02
+  f0:	19 82       	std	Y+1, r1	; 0x01
+  f2:	89 81       	ldd	r24, Y+1	; 0x01
+  f4:	9a 81       	ldd	r25, Y+2	; 0x02
+  f6:	80 31       	cpi	r24, 0x10	; 16
+  f8:	97 42       	sbci	r25, 0x27	; 39
+  fa:	50 f4       	brcc	.+20     	; 0x110 <main+0x3e>
+  fc:	89 81       	ldd	r24, Y+1	; 0x01
+  fe:	9a 81       	ldd	r25, Y+2	; 0x02
+ 100:	01 96       	adiw	r24, 0x01	; 1
+ 102:	9a 83       	std	Y+2, r25	; 0x02
+ 104:	89 83       	std	Y+1, r24	; 0x01
+ 106:	89 81       	ldd	r24, Y+1	; 0x01
+ 108:	9a 81       	ldd	r25, Y+2	; 0x02
+ 10a:	80 31       	cpi	r24, 0x10	; 16
+ 10c:	97 42       	sbci	r25, 0x27	; 39
+ 10e:	b0 f3       	brcs	.-20     	; 0xfc <main+0x2a>
+	}
+	/*if(strlen(x1)==8)
+	{
+		DIO_Write(4,HIGH);
+	}*/
+	SPI_MasterTransmitString(x1);
+ 110:	80 e0       	ldi	r24, 0x00	; 0
+ 112:	90 e0       	ldi	r25, 0x00	; 0
+ 114:	0e 94 c4 02 	call	0x588	; 0x588 <SPI_MasterTransmitString>
+    }
+ 118:	e5 cf       	rjmp	.-54     	; 0xe4 <main+0x12>
+
+0000011a <DIO_Init>:
+
+#include "DIO.h"
+
+
+enuErrorStatus_t DIO_Init(void)
+{
+ 11a:	cf 93       	push	r28
+ 11c:	df 93       	push	r29
+ 11e:	c0 e6       	ldi	r28, 0x60	; 96
+ 120:	d0 e0       	ldi	r29, 0x00	; 0
+ 122:	4f e6       	ldi	r20, 0x6F	; 111
+ 124:	50 e0       	ldi	r21, 0x00	; 0
+	uint8_t i;
+	for(i=0;i<DIO_GROUPS_NO;i++)
+	{
+		switch(astrDIOConfigParameters[i].enuPinNo)
+ 126:	e8 81       	ld	r30, Y
+ 128:	8e 2f       	mov	r24, r30
+ 12a:	90 e0       	ldi	r25, 0x00	; 0
+ 12c:	80 32       	cpi	r24, 0x20	; 32
+ 12e:	91 05       	cpc	r25, r1
+ 130:	08 f0       	brcs	.+2      	; 0x134 <DIO_Init+0x1a>
+ 132:	19 c2       	rjmp	.+1074   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+ 134:	fc 01       	movw	r30, r24
+ 136:	e6 5d       	subi	r30, 0xD6	; 214
+ 138:	ff 4f       	sbci	r31, 0xFF	; 255
+ 13a:	0c 94 30 03 	jmp	0x660	; 0x660 <__tablejump2__>
+		{
+			case PA0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 13e:	89 81       	ldd	r24, Y+1	; 0x01
+ 140:	81 30       	cpi	r24, 0x01	; 1
+ 142:	11 f4       	brne	.+4      	; 0x148 <DIO_Init+0x2e>
+				{
+					SET_BIT(DDRA_R,PA0);
+ 144:	d0 9a       	sbi	0x1a, 0	; 26
+ 146:	0f c2       	rjmp	.+1054   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 148:	81 11       	cpse	r24, r1
+ 14a:	0d c2       	rjmp	.+1050   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 14c:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA0);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 14e:	81 30       	cpi	r24, 0x01	; 1
+ 150:	19 f4       	brne	.+6      	; 0x158 <DIO_Init+0x3e>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA0);
+ 152:	d0 98       	cbi	0x1a, 0	; 26
+					SET_BIT(PORTA_R,PA0);
+ 154:	d8 9a       	sbi	0x1b, 0	; 27
+ 156:	07 c2       	rjmp	.+1038   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 158:	81 11       	cpse	r24, r1
+ 15a:	05 c2       	rjmp	.+1034   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA0);
+ 15c:	d0 98       	cbi	0x1a, 0	; 26
+ 15e:	03 c2       	rjmp	.+1030   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PA1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 160:	89 81       	ldd	r24, Y+1	; 0x01
+ 162:	81 30       	cpi	r24, 0x01	; 1
+ 164:	11 f4       	brne	.+4      	; 0x16a <DIO_Init+0x50>
+				{
+					SET_BIT(DDRA_R,PA1);
+ 166:	d1 9a       	sbi	0x1a, 1	; 26
+ 168:	fe c1       	rjmp	.+1020   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 16a:	81 11       	cpse	r24, r1
+ 16c:	fc c1       	rjmp	.+1016   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 16e:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA1);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 170:	81 30       	cpi	r24, 0x01	; 1
+ 172:	19 f4       	brne	.+6      	; 0x17a <DIO_Init+0x60>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA1);
+ 174:	d1 98       	cbi	0x1a, 1	; 26
+					SET_BIT(PORTA_R,PA1);
+ 176:	d9 9a       	sbi	0x1b, 1	; 27
+ 178:	f6 c1       	rjmp	.+1004   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 17a:	81 11       	cpse	r24, r1
+ 17c:	f4 c1       	rjmp	.+1000   	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA1);
+ 17e:	d1 98       	cbi	0x1a, 1	; 26
+ 180:	f2 c1       	rjmp	.+996    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PA2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 182:	89 81       	ldd	r24, Y+1	; 0x01
+ 184:	81 30       	cpi	r24, 0x01	; 1
+ 186:	11 f4       	brne	.+4      	; 0x18c <DIO_Init+0x72>
+				{
+					SET_BIT(DDRA_R,PA2);
+ 188:	d2 9a       	sbi	0x1a, 2	; 26
+ 18a:	ed c1       	rjmp	.+986    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 18c:	81 11       	cpse	r24, r1
+ 18e:	eb c1       	rjmp	.+982    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 190:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA2);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 192:	81 30       	cpi	r24, 0x01	; 1
+ 194:	19 f4       	brne	.+6      	; 0x19c <DIO_Init+0x82>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA2);
+ 196:	d2 98       	cbi	0x1a, 2	; 26
+					SET_BIT(PORTA_R,PA2);
+ 198:	da 9a       	sbi	0x1b, 2	; 27
+ 19a:	e5 c1       	rjmp	.+970    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 19c:	81 11       	cpse	r24, r1
+ 19e:	e3 c1       	rjmp	.+966    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA2);
+ 1a0:	d2 98       	cbi	0x1a, 2	; 26
+ 1a2:	e1 c1       	rjmp	.+962    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PA3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 1a4:	89 81       	ldd	r24, Y+1	; 0x01
+ 1a6:	81 30       	cpi	r24, 0x01	; 1
+ 1a8:	11 f4       	brne	.+4      	; 0x1ae <DIO_Init+0x94>
+				{
+					SET_BIT(DDRA_R,PA3);
+ 1aa:	d3 9a       	sbi	0x1a, 3	; 26
+ 1ac:	dc c1       	rjmp	.+952    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1ae:	81 11       	cpse	r24, r1
+ 1b0:	da c1       	rjmp	.+948    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 1b2:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA3);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1b4:	81 30       	cpi	r24, 0x01	; 1
+ 1b6:	19 f4       	brne	.+6      	; 0x1be <DIO_Init+0xa4>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA3);
+ 1b8:	d3 98       	cbi	0x1a, 3	; 26
+					SET_BIT(PORTA_R,PA3);
+ 1ba:	db 9a       	sbi	0x1b, 3	; 27
+ 1bc:	d4 c1       	rjmp	.+936    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1be:	81 11       	cpse	r24, r1
+ 1c0:	d2 c1       	rjmp	.+932    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA3);
+ 1c2:	d3 98       	cbi	0x1a, 3	; 26
+ 1c4:	d0 c1       	rjmp	.+928    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PA4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 1c6:	89 81       	ldd	r24, Y+1	; 0x01
+ 1c8:	81 30       	cpi	r24, 0x01	; 1
+ 1ca:	11 f4       	brne	.+4      	; 0x1d0 <DIO_Init+0xb6>
+				{
+					SET_BIT(DDRA_R,PA4);
+ 1cc:	d4 9a       	sbi	0x1a, 4	; 26
+ 1ce:	cb c1       	rjmp	.+918    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1d0:	81 11       	cpse	r24, r1
+ 1d2:	c9 c1       	rjmp	.+914    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 1d4:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA4);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1d6:	81 30       	cpi	r24, 0x01	; 1
+ 1d8:	19 f4       	brne	.+6      	; 0x1e0 <DIO_Init+0xc6>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA4);
+ 1da:	d4 98       	cbi	0x1a, 4	; 26
+					SET_BIT(PORTA_R,PA4);
+ 1dc:	dc 9a       	sbi	0x1b, 4	; 27
+ 1de:	c3 c1       	rjmp	.+902    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1e0:	81 11       	cpse	r24, r1
+ 1e2:	c1 c1       	rjmp	.+898    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA4);
+ 1e4:	d4 98       	cbi	0x1a, 4	; 26
+ 1e6:	bf c1       	rjmp	.+894    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PA5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 1e8:	89 81       	ldd	r24, Y+1	; 0x01
+ 1ea:	81 30       	cpi	r24, 0x01	; 1
+ 1ec:	11 f4       	brne	.+4      	; 0x1f2 <DIO_Init+0xd8>
+				{
+					SET_BIT(DDRA_R,PA5);
+ 1ee:	d5 9a       	sbi	0x1a, 5	; 26
+ 1f0:	ba c1       	rjmp	.+884    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1f2:	81 11       	cpse	r24, r1
+ 1f4:	b8 c1       	rjmp	.+880    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 1f6:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA5);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 1f8:	81 30       	cpi	r24, 0x01	; 1
+ 1fa:	19 f4       	brne	.+6      	; 0x202 <DIO_Init+0xe8>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA5);
+ 1fc:	d5 98       	cbi	0x1a, 5	; 26
+					SET_BIT(PORTA_R,PA5);
+ 1fe:	dd 9a       	sbi	0x1b, 5	; 27
+ 200:	b2 c1       	rjmp	.+868    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 202:	81 11       	cpse	r24, r1
+ 204:	b0 c1       	rjmp	.+864    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA5);
+ 206:	d5 98       	cbi	0x1a, 5	; 26
+ 208:	ae c1       	rjmp	.+860    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PA6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 20a:	89 81       	ldd	r24, Y+1	; 0x01
+ 20c:	81 30       	cpi	r24, 0x01	; 1
+ 20e:	11 f4       	brne	.+4      	; 0x214 <DIO_Init+0xfa>
+				{
+					SET_BIT(DDRA_R,PA6);
+ 210:	d6 9a       	sbi	0x1a, 6	; 26
+ 212:	a9 c1       	rjmp	.+850    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 214:	81 11       	cpse	r24, r1
+ 216:	a7 c1       	rjmp	.+846    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 218:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA6);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 21a:	81 30       	cpi	r24, 0x01	; 1
+ 21c:	19 f4       	brne	.+6      	; 0x224 <DIO_Init+0x10a>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA6);
+ 21e:	d6 98       	cbi	0x1a, 6	; 26
+					SET_BIT(PORTA_R,PA6);
+ 220:	de 9a       	sbi	0x1b, 6	; 27
+ 222:	a1 c1       	rjmp	.+834    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 224:	81 11       	cpse	r24, r1
+ 226:	9f c1       	rjmp	.+830    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA6);
+ 228:	d6 98       	cbi	0x1a, 6	; 26
+ 22a:	9d c1       	rjmp	.+826    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PA7:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 22c:	89 81       	ldd	r24, Y+1	; 0x01
+ 22e:	81 30       	cpi	r24, 0x01	; 1
+ 230:	11 f4       	brne	.+4      	; 0x236 <DIO_Init+0x11c>
+				{
+					SET_BIT(DDRA_R,PA7);
+ 232:	d7 9a       	sbi	0x1a, 7	; 26
+ 234:	98 c1       	rjmp	.+816    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 236:	81 11       	cpse	r24, r1
+ 238:	96 c1       	rjmp	.+812    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 23a:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PA7:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRA_R,PA7);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 23c:	81 30       	cpi	r24, 0x01	; 1
+ 23e:	19 f4       	brne	.+6      	; 0x246 <DIO_Init+0x12c>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRA_R,PA7);
+ 240:	d7 98       	cbi	0x1a, 7	; 26
+					SET_BIT(PORTA_R,PA7);
+ 242:	df 9a       	sbi	0x1b, 7	; 27
+ 244:	90 c1       	rjmp	.+800    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 246:	81 11       	cpse	r24, r1
+ 248:	8e c1       	rjmp	.+796    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRA_R,PA7);
+ 24a:	d7 98       	cbi	0x1a, 7	; 26
+ 24c:	8c c1       	rjmp	.+792    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				break;
+			}
+			
+			case PB0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 24e:	89 81       	ldd	r24, Y+1	; 0x01
+ 250:	81 30       	cpi	r24, 0x01	; 1
+ 252:	19 f4       	brne	.+6      	; 0x25a <DIO_Init+0x140>
+				{
+					SET_BIT(DDRB_R,PB0);
+ 254:	87 b3       	in	r24, 0x17	; 23
+ 256:	87 bb       	out	0x17, r24	; 23
+ 258:	86 c1       	rjmp	.+780    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 25a:	81 11       	cpse	r24, r1
+ 25c:	84 c1       	rjmp	.+776    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 25e:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,PB0);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 260:	81 30       	cpi	r24, 0x01	; 1
+ 262:	19 f4       	brne	.+6      	; 0x26a <DIO_Init+0x150>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,0);
+ 264:	b8 98       	cbi	0x17, 0	; 23
+					SET_BIT(PORTB_R,0);
+ 266:	c0 9a       	sbi	0x18, 0	; 24
+ 268:	7e c1       	rjmp	.+764    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 26a:	81 11       	cpse	r24, r1
+ 26c:	7c c1       	rjmp	.+760    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,0);
+ 26e:	b8 98       	cbi	0x17, 0	; 23
+ 270:	7a c1       	rjmp	.+756    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PB1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 272:	89 81       	ldd	r24, Y+1	; 0x01
+ 274:	81 30       	cpi	r24, 0x01	; 1
+ 276:	11 f4       	brne	.+4      	; 0x27c <DIO_Init+0x162>
+				{
+					SET_BIT(DDRB_R,1);
+ 278:	b9 9a       	sbi	0x17, 1	; 23
+ 27a:	75 c1       	rjmp	.+746    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 27c:	81 11       	cpse	r24, r1
+ 27e:	73 c1       	rjmp	.+742    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 280:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,1);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 282:	81 30       	cpi	r24, 0x01	; 1
+ 284:	19 f4       	brne	.+6      	; 0x28c <DIO_Init+0x172>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,1);
+ 286:	b9 98       	cbi	0x17, 1	; 23
+					SET_BIT(PORTB_R,1);
+ 288:	c1 9a       	sbi	0x18, 1	; 24
+ 28a:	6d c1       	rjmp	.+730    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 28c:	81 11       	cpse	r24, r1
+ 28e:	6b c1       	rjmp	.+726    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,1);
+ 290:	b9 98       	cbi	0x17, 1	; 23
+ 292:	69 c1       	rjmp	.+722    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PB2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 294:	89 81       	ldd	r24, Y+1	; 0x01
+ 296:	81 30       	cpi	r24, 0x01	; 1
+ 298:	11 f4       	brne	.+4      	; 0x29e <DIO_Init+0x184>
+				{
+					SET_BIT(DDRB_R,2);
+ 29a:	ba 9a       	sbi	0x17, 2	; 23
+ 29c:	64 c1       	rjmp	.+712    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 29e:	81 11       	cpse	r24, r1
+ 2a0:	62 c1       	rjmp	.+708    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 2a2:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,2);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2a4:	81 30       	cpi	r24, 0x01	; 1
+ 2a6:	19 f4       	brne	.+6      	; 0x2ae <DIO_Init+0x194>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,2);
+ 2a8:	ba 98       	cbi	0x17, 2	; 23
+					SET_BIT(PORTB_R,2);
+ 2aa:	c2 9a       	sbi	0x18, 2	; 24
+ 2ac:	5c c1       	rjmp	.+696    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2ae:	81 11       	cpse	r24, r1
+ 2b0:	5a c1       	rjmp	.+692    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,2);
+ 2b2:	ba 98       	cbi	0x17, 2	; 23
+ 2b4:	58 c1       	rjmp	.+688    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PB3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 2b6:	89 81       	ldd	r24, Y+1	; 0x01
+ 2b8:	81 30       	cpi	r24, 0x01	; 1
+ 2ba:	11 f4       	brne	.+4      	; 0x2c0 <DIO_Init+0x1a6>
+				{
+					SET_BIT(DDRB_R,3);
+ 2bc:	bb 9a       	sbi	0x17, 3	; 23
+ 2be:	53 c1       	rjmp	.+678    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2c0:	81 11       	cpse	r24, r1
+ 2c2:	51 c1       	rjmp	.+674    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 2c4:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,3);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2c6:	81 30       	cpi	r24, 0x01	; 1
+ 2c8:	19 f4       	brne	.+6      	; 0x2d0 <DIO_Init+0x1b6>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,3);
+ 2ca:	bb 98       	cbi	0x17, 3	; 23
+					SET_BIT(PORTB_R,3);
+ 2cc:	c3 9a       	sbi	0x18, 3	; 24
+ 2ce:	4b c1       	rjmp	.+662    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2d0:	81 11       	cpse	r24, r1
+ 2d2:	49 c1       	rjmp	.+658    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,3);
+ 2d4:	bb 98       	cbi	0x17, 3	; 23
+ 2d6:	47 c1       	rjmp	.+654    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PB4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 2d8:	89 81       	ldd	r24, Y+1	; 0x01
+ 2da:	81 30       	cpi	r24, 0x01	; 1
+ 2dc:	11 f4       	brne	.+4      	; 0x2e2 <DIO_Init+0x1c8>
+				{
+					SET_BIT(DDRB_R,4);
+ 2de:	bc 9a       	sbi	0x17, 4	; 23
+ 2e0:	42 c1       	rjmp	.+644    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2e2:	81 11       	cpse	r24, r1
+ 2e4:	40 c1       	rjmp	.+640    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 2e6:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,4);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2e8:	81 30       	cpi	r24, 0x01	; 1
+ 2ea:	19 f4       	brne	.+6      	; 0x2f2 <DIO_Init+0x1d8>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,4);
+ 2ec:	bc 98       	cbi	0x17, 4	; 23
+					SET_BIT(PORTB_R,4);
+ 2ee:	c4 9a       	sbi	0x18, 4	; 24
+ 2f0:	3a c1       	rjmp	.+628    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 2f2:	81 11       	cpse	r24, r1
+ 2f4:	38 c1       	rjmp	.+624    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,4);
+ 2f6:	bc 98       	cbi	0x17, 4	; 23
+ 2f8:	36 c1       	rjmp	.+620    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PB5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 2fa:	89 81       	ldd	r24, Y+1	; 0x01
+ 2fc:	81 30       	cpi	r24, 0x01	; 1
+ 2fe:	11 f4       	brne	.+4      	; 0x304 <DIO_Init+0x1ea>
+				{
+					SET_BIT(DDRB_R,5);
+ 300:	bd 9a       	sbi	0x17, 5	; 23
+ 302:	31 c1       	rjmp	.+610    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 304:	81 11       	cpse	r24, r1
+ 306:	2f c1       	rjmp	.+606    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 308:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,5);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 30a:	81 30       	cpi	r24, 0x01	; 1
+ 30c:	19 f4       	brne	.+6      	; 0x314 <DIO_Init+0x1fa>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,5);
+ 30e:	bd 98       	cbi	0x17, 5	; 23
+					SET_BIT(PORTB_R,5);
+ 310:	c5 9a       	sbi	0x18, 5	; 24
+ 312:	29 c1       	rjmp	.+594    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 314:	81 11       	cpse	r24, r1
+ 316:	27 c1       	rjmp	.+590    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,5);
+ 318:	bd 98       	cbi	0x17, 5	; 23
+ 31a:	25 c1       	rjmp	.+586    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PB6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 31c:	89 81       	ldd	r24, Y+1	; 0x01
+ 31e:	81 30       	cpi	r24, 0x01	; 1
+ 320:	11 f4       	brne	.+4      	; 0x326 <DIO_Init+0x20c>
+				{
+					SET_BIT(DDRB_R,6);
+ 322:	be 9a       	sbi	0x17, 6	; 23
+ 324:	20 c1       	rjmp	.+576    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 326:	81 11       	cpse	r24, r1
+ 328:	1e c1       	rjmp	.+572    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 32a:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,6);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 32c:	81 30       	cpi	r24, 0x01	; 1
+ 32e:	19 f4       	brne	.+6      	; 0x336 <DIO_Init+0x21c>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,6);
+ 330:	be 98       	cbi	0x17, 6	; 23
+					SET_BIT(PORTB_R,6);
+ 332:	c6 9a       	sbi	0x18, 6	; 24
+ 334:	18 c1       	rjmp	.+560    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 336:	81 11       	cpse	r24, r1
+ 338:	16 c1       	rjmp	.+556    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,6);
+ 33a:	be 98       	cbi	0x17, 6	; 23
+ 33c:	14 c1       	rjmp	.+552    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PB7:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 33e:	89 81       	ldd	r24, Y+1	; 0x01
+ 340:	81 30       	cpi	r24, 0x01	; 1
+ 342:	11 f4       	brne	.+4      	; 0x348 <DIO_Init+0x22e>
+				{
+					SET_BIT(DDRB_R,7);
+ 344:	bf 9a       	sbi	0x17, 7	; 23
+ 346:	0f c1       	rjmp	.+542    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 348:	81 11       	cpse	r24, r1
+ 34a:	0d c1       	rjmp	.+538    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 34c:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PB7:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRB_R,7);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 34e:	81 30       	cpi	r24, 0x01	; 1
+ 350:	19 f4       	brne	.+6      	; 0x358 <DIO_Init+0x23e>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRB_R,7);
+ 352:	bf 98       	cbi	0x17, 7	; 23
+					SET_BIT(PORTB_R,7);
+ 354:	c7 9a       	sbi	0x18, 7	; 24
+ 356:	07 c1       	rjmp	.+526    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 358:	81 11       	cpse	r24, r1
+ 35a:	05 c1       	rjmp	.+522    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRB_R,7);
+ 35c:	bf 98       	cbi	0x17, 7	; 23
+ 35e:	03 c1       	rjmp	.+518    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 360:	89 81       	ldd	r24, Y+1	; 0x01
+ 362:	81 30       	cpi	r24, 0x01	; 1
+ 364:	11 f4       	brne	.+4      	; 0x36a <DIO_Init+0x250>
+				{
+					SET_BIT(DDRC_R,0);
+ 366:	a0 9a       	sbi	0x14, 0	; 20
+ 368:	fe c0       	rjmp	.+508    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 36a:	81 11       	cpse	r24, r1
+ 36c:	fc c0       	rjmp	.+504    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 36e:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PC0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRC_R,0);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 370:	81 30       	cpi	r24, 0x01	; 1
+ 372:	19 f4       	brne	.+6      	; 0x37a <DIO_Init+0x260>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRC_R,0);
+ 374:	a0 98       	cbi	0x14, 0	; 20
+					SET_BIT(PORTC_R,0);
+ 376:	a8 9a       	sbi	0x15, 0	; 21
+ 378:	f6 c0       	rjmp	.+492    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 37a:	81 11       	cpse	r24, r1
+ 37c:	f4 c0       	rjmp	.+488    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRC_R,0);
+ 37e:	a0 98       	cbi	0x14, 0	; 20
+ 380:	f2 c0       	rjmp	.+484    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 382:	89 81       	ldd	r24, Y+1	; 0x01
+ 384:	81 30       	cpi	r24, 0x01	; 1
+ 386:	11 f4       	brne	.+4      	; 0x38c <DIO_Init+0x272>
+				{
+					SET_BIT(DDRC_R,1);
+ 388:	a1 9a       	sbi	0x14, 1	; 20
+ 38a:	ed c0       	rjmp	.+474    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 38c:	81 11       	cpse	r24, r1
+ 38e:	eb c0       	rjmp	.+470    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 390:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PC1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRC_R,1);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 392:	81 30       	cpi	r24, 0x01	; 1
+ 394:	19 f4       	brne	.+6      	; 0x39c <DIO_Init+0x282>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRC_R,1);
+ 396:	a1 98       	cbi	0x14, 1	; 20
+					SET_BIT(PORTC_R,1);
+ 398:	a9 9a       	sbi	0x15, 1	; 21
+ 39a:	e5 c0       	rjmp	.+458    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 39c:	81 11       	cpse	r24, r1
+ 39e:	e3 c0       	rjmp	.+454    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRC_R,1);
+ 3a0:	a1 98       	cbi	0x14, 1	; 20
+ 3a2:	e1 c0       	rjmp	.+450    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 3a4:	89 81       	ldd	r24, Y+1	; 0x01
+ 3a6:	81 30       	cpi	r24, 0x01	; 1
+ 3a8:	11 f4       	brne	.+4      	; 0x3ae <DIO_Init+0x294>
+				{
+					SET_BIT(DDRC_R,2);
+ 3aa:	a2 9a       	sbi	0x14, 2	; 20
+ 3ac:	dc c0       	rjmp	.+440    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3ae:	81 11       	cpse	r24, r1
+ 3b0:	da c0       	rjmp	.+436    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 3b2:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PC2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRC_R,2);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3b4:	81 30       	cpi	r24, 0x01	; 1
+ 3b6:	19 f4       	brne	.+6      	; 0x3be <DIO_Init+0x2a4>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRC_R,2);
+ 3b8:	a2 98       	cbi	0x14, 2	; 20
+					SET_BIT(PORTC_R,2);
+ 3ba:	aa 9a       	sbi	0x15, 2	; 21
+ 3bc:	d4 c0       	rjmp	.+424    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3be:	81 11       	cpse	r24, r1
+ 3c0:	d2 c0       	rjmp	.+420    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRC_R,2);
+ 3c2:	a2 98       	cbi	0x14, 2	; 20
+ 3c4:	d0 c0       	rjmp	.+416    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 3c6:	89 81       	ldd	r24, Y+1	; 0x01
+ 3c8:	81 30       	cpi	r24, 0x01	; 1
+ 3ca:	11 f4       	brne	.+4      	; 0x3d0 <DIO_Init+0x2b6>
+				{
+					SET_BIT(DDRC_R,3);
+ 3cc:	a3 9a       	sbi	0x14, 3	; 20
+ 3ce:	cb c0       	rjmp	.+406    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3d0:	81 11       	cpse	r24, r1
+ 3d2:	c9 c0       	rjmp	.+402    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 3d4:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PC3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRC_R,3);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3d6:	81 30       	cpi	r24, 0x01	; 1
+ 3d8:	19 f4       	brne	.+6      	; 0x3e0 <DIO_Init+0x2c6>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRC_R,3);
+ 3da:	a3 98       	cbi	0x14, 3	; 20
+					SET_BIT(PORTC_R,3);
+ 3dc:	ab 9a       	sbi	0x15, 3	; 21
+ 3de:	c3 c0       	rjmp	.+390    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3e0:	81 11       	cpse	r24, r1
+ 3e2:	c1 c0       	rjmp	.+386    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRC_R,3);
+ 3e4:	a3 98       	cbi	0x14, 3	; 20
+ 3e6:	bf c0       	rjmp	.+382    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 3e8:	89 81       	ldd	r24, Y+1	; 0x01
+ 3ea:	81 30       	cpi	r24, 0x01	; 1
+ 3ec:	11 f4       	brne	.+4      	; 0x3f2 <DIO_Init+0x2d8>
+				{
+					SET_BIT(DDRC_R,4);
+ 3ee:	a4 9a       	sbi	0x14, 4	; 20
+ 3f0:	ba c0       	rjmp	.+372    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3f2:	81 11       	cpse	r24, r1
+ 3f4:	b8 c0       	rjmp	.+368    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 3f6:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PC4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRC_R,4);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 3f8:	81 30       	cpi	r24, 0x01	; 1
+ 3fa:	19 f4       	brne	.+6      	; 0x402 <__LOCK_REGION_LENGTH__+0x2>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRC_R,4);
+ 3fc:	a4 98       	cbi	0x14, 4	; 20
+					SET_BIT(PORTC_R,4);
+ 3fe:	ac 9a       	sbi	0x15, 4	; 21
+ 400:	b2 c0       	rjmp	.+356    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 402:	81 11       	cpse	r24, r1
+ 404:	b0 c0       	rjmp	.+352    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRC_R,4);
+ 406:	a4 98       	cbi	0x14, 4	; 20
+ 408:	ae c0       	rjmp	.+348    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 40a:	89 81       	ldd	r24, Y+1	; 0x01
+ 40c:	81 30       	cpi	r24, 0x01	; 1
+ 40e:	11 f4       	brne	.+4      	; 0x414 <__LOCK_REGION_LENGTH__+0x14>
+				{
+					SET_BIT(DDRC_R,5);
+ 410:	a5 9a       	sbi	0x14, 5	; 20
+ 412:	a9 c0       	rjmp	.+338    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 414:	81 11       	cpse	r24, r1
+ 416:	a7 c0       	rjmp	.+334    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 418:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PC5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRC_R,5);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 41a:	81 30       	cpi	r24, 0x01	; 1
+ 41c:	19 f4       	brne	.+6      	; 0x424 <__LOCK_REGION_LENGTH__+0x24>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRC_R,5);
+ 41e:	a5 98       	cbi	0x14, 5	; 20
+					SET_BIT(PORTC_R,5);
+ 420:	ad 9a       	sbi	0x15, 5	; 21
+ 422:	a1 c0       	rjmp	.+322    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 424:	81 11       	cpse	r24, r1
+ 426:	9f c0       	rjmp	.+318    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRC_R,5);
+ 428:	a5 98       	cbi	0x14, 5	; 20
+ 42a:	9d c0       	rjmp	.+314    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 42c:	89 81       	ldd	r24, Y+1	; 0x01
+ 42e:	81 30       	cpi	r24, 0x01	; 1
+ 430:	11 f4       	brne	.+4      	; 0x436 <__LOCK_REGION_LENGTH__+0x36>
+				{
+					SET_BIT(DDRC_R,6);
+ 432:	a6 9a       	sbi	0x14, 6	; 20
+ 434:	98 c0       	rjmp	.+304    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 436:	81 11       	cpse	r24, r1
+ 438:	96 c0       	rjmp	.+300    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 43a:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PC6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRC_R,6);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 43c:	81 30       	cpi	r24, 0x01	; 1
+ 43e:	19 f4       	brne	.+6      	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRC_R,6);
+ 440:	a6 98       	cbi	0x14, 6	; 20
+					SET_BIT(PORTC_R,6);
+ 442:	ae 9a       	sbi	0x15, 6	; 21
+ 444:	90 c0       	rjmp	.+288    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 446:	81 11       	cpse	r24, r1
+ 448:	8e c0       	rjmp	.+284    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRC_R,6);
+ 44a:	a6 98       	cbi	0x14, 6	; 20
+ 44c:	8c c0       	rjmp	.+280    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PC7:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==INPUT)
+ 44e:	89 81       	ldd	r24, Y+1	; 0x01
+ 450:	81 11       	cpse	r24, r1
+ 452:	89 c0       	rjmp	.+274    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				{
+					SET_BIT(DDRC_R,7);
+ 454:	a7 9a       	sbi	0x14, 7	; 20
+ 456:	87 c0       	rjmp	.+270    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 458:	89 81       	ldd	r24, Y+1	; 0x01
+ 45a:	81 30       	cpi	r24, 0x01	; 1
+ 45c:	11 f4       	brne	.+4      	; 0x462 <__LOCK_REGION_LENGTH__+0x62>
+				{
+					SET_BIT(DDRD_R,0);
+ 45e:	88 9a       	sbi	0x11, 0	; 17
+ 460:	82 c0       	rjmp	.+260    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 462:	81 11       	cpse	r24, r1
+ 464:	80 c0       	rjmp	.+256    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 466:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD0:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,0);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 468:	81 30       	cpi	r24, 0x01	; 1
+ 46a:	19 f4       	brne	.+6      	; 0x472 <__LOCK_REGION_LENGTH__+0x72>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,0);
+ 46c:	88 98       	cbi	0x11, 0	; 17
+					SET_BIT(PORTD_R,0);
+ 46e:	90 9a       	sbi	0x12, 0	; 18
+ 470:	7a c0       	rjmp	.+244    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 472:	81 11       	cpse	r24, r1
+ 474:	78 c0       	rjmp	.+240    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,0);
+ 476:	88 98       	cbi	0x11, 0	; 17
+ 478:	76 c0       	rjmp	.+236    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 47a:	89 81       	ldd	r24, Y+1	; 0x01
+ 47c:	81 30       	cpi	r24, 0x01	; 1
+ 47e:	11 f4       	brne	.+4      	; 0x484 <__LOCK_REGION_LENGTH__+0x84>
+				{
+					SET_BIT(DDRD_R,1);
+ 480:	89 9a       	sbi	0x11, 1	; 17
+ 482:	71 c0       	rjmp	.+226    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 484:	81 11       	cpse	r24, r1
+ 486:	6f c0       	rjmp	.+222    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 488:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD1:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,1);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 48a:	81 30       	cpi	r24, 0x01	; 1
+ 48c:	19 f4       	brne	.+6      	; 0x494 <__LOCK_REGION_LENGTH__+0x94>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,1);
+ 48e:	89 98       	cbi	0x11, 1	; 17
+					SET_BIT(PORTD_R,1);
+ 490:	91 9a       	sbi	0x12, 1	; 18
+ 492:	69 c0       	rjmp	.+210    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 494:	81 11       	cpse	r24, r1
+ 496:	67 c0       	rjmp	.+206    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,1);
+ 498:	89 98       	cbi	0x11, 1	; 17
+ 49a:	65 c0       	rjmp	.+202    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 49c:	89 81       	ldd	r24, Y+1	; 0x01
+ 49e:	81 30       	cpi	r24, 0x01	; 1
+ 4a0:	11 f4       	brne	.+4      	; 0x4a6 <__LOCK_REGION_LENGTH__+0xa6>
+				{
+					SET_BIT(DDRD_R,2);
+ 4a2:	8a 9a       	sbi	0x11, 2	; 17
+ 4a4:	60 c0       	rjmp	.+192    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4a6:	81 11       	cpse	r24, r1
+ 4a8:	5e c0       	rjmp	.+188    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 4aa:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD2:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,2);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4ac:	81 30       	cpi	r24, 0x01	; 1
+ 4ae:	19 f4       	brne	.+6      	; 0x4b6 <__LOCK_REGION_LENGTH__+0xb6>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,2);
+ 4b0:	8a 98       	cbi	0x11, 2	; 17
+					SET_BIT(PORTD_R,2);
+ 4b2:	92 9a       	sbi	0x12, 2	; 18
+ 4b4:	58 c0       	rjmp	.+176    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4b6:	81 11       	cpse	r24, r1
+ 4b8:	56 c0       	rjmp	.+172    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,2);
+ 4ba:	8a 98       	cbi	0x11, 2	; 17
+ 4bc:	54 c0       	rjmp	.+168    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 4be:	89 81       	ldd	r24, Y+1	; 0x01
+ 4c0:	81 30       	cpi	r24, 0x01	; 1
+ 4c2:	11 f4       	brne	.+4      	; 0x4c8 <__LOCK_REGION_LENGTH__+0xc8>
+				{
+					SET_BIT(DDRD_R,3);
+ 4c4:	8b 9a       	sbi	0x11, 3	; 17
+ 4c6:	4f c0       	rjmp	.+158    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4c8:	81 11       	cpse	r24, r1
+ 4ca:	4d c0       	rjmp	.+154    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 4cc:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD3:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,3);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4ce:	81 30       	cpi	r24, 0x01	; 1
+ 4d0:	19 f4       	brne	.+6      	; 0x4d8 <__LOCK_REGION_LENGTH__+0xd8>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,3);
+ 4d2:	8b 98       	cbi	0x11, 3	; 17
+					SET_BIT(PORTD_R,3);
+ 4d4:	93 9a       	sbi	0x12, 3	; 18
+ 4d6:	47 c0       	rjmp	.+142    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4d8:	81 11       	cpse	r24, r1
+ 4da:	45 c0       	rjmp	.+138    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,3);
+ 4dc:	8b 98       	cbi	0x11, 3	; 17
+ 4de:	43 c0       	rjmp	.+134    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 4e0:	89 81       	ldd	r24, Y+1	; 0x01
+ 4e2:	81 30       	cpi	r24, 0x01	; 1
+ 4e4:	11 f4       	brne	.+4      	; 0x4ea <__LOCK_REGION_LENGTH__+0xea>
+				{
+					SET_BIT(DDRD_R,4);
+ 4e6:	8c 9a       	sbi	0x11, 4	; 17
+ 4e8:	3e c0       	rjmp	.+124    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4ea:	81 11       	cpse	r24, r1
+ 4ec:	3c c0       	rjmp	.+120    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 4ee:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD4:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,4);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4f0:	81 30       	cpi	r24, 0x01	; 1
+ 4f2:	19 f4       	brne	.+6      	; 0x4fa <__LOCK_REGION_LENGTH__+0xfa>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,4);
+ 4f4:	8c 98       	cbi	0x11, 4	; 17
+					SET_BIT(PORTD_R,4);
+ 4f6:	94 9a       	sbi	0x12, 4	; 18
+ 4f8:	36 c0       	rjmp	.+108    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 4fa:	81 11       	cpse	r24, r1
+ 4fc:	34 c0       	rjmp	.+104    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,4);
+ 4fe:	8c 98       	cbi	0x11, 4	; 17
+ 500:	32 c0       	rjmp	.+100    	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 502:	89 81       	ldd	r24, Y+1	; 0x01
+ 504:	81 30       	cpi	r24, 0x01	; 1
+ 506:	11 f4       	brne	.+4      	; 0x50c <__LOCK_REGION_LENGTH__+0x10c>
+				{
+					SET_BIT(DDRD_R,5);
+ 508:	8d 9a       	sbi	0x11, 5	; 17
+ 50a:	2d c0       	rjmp	.+90     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 50c:	81 11       	cpse	r24, r1
+ 50e:	2b c0       	rjmp	.+86     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 510:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD5:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,5);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 512:	81 30       	cpi	r24, 0x01	; 1
+ 514:	19 f4       	brne	.+6      	; 0x51c <__LOCK_REGION_LENGTH__+0x11c>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,5);
+ 516:	8d 98       	cbi	0x11, 5	; 17
+					SET_BIT(PORTD_R,5);
+ 518:	95 9a       	sbi	0x12, 5	; 18
+ 51a:	25 c0       	rjmp	.+74     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 51c:	81 11       	cpse	r24, r1
+ 51e:	23 c0       	rjmp	.+70     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,5);
+ 520:	8d 98       	cbi	0x11, 5	; 17
+ 522:	21 c0       	rjmp	.+66     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 524:	89 81       	ldd	r24, Y+1	; 0x01
+ 526:	81 30       	cpi	r24, 0x01	; 1
+ 528:	11 f4       	brne	.+4      	; 0x52e <__LOCK_REGION_LENGTH__+0x12e>
+				{
+					SET_BIT(DDRD_R,6);
+ 52a:	8e 9a       	sbi	0x11, 6	; 17
+ 52c:	1c c0       	rjmp	.+56     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 52e:	81 11       	cpse	r24, r1
+ 530:	1a c0       	rjmp	.+52     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 532:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD6:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,6);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 534:	81 30       	cpi	r24, 0x01	; 1
+ 536:	19 f4       	brne	.+6      	; 0x53e <__LOCK_REGION_LENGTH__+0x13e>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,6);
+ 538:	8e 98       	cbi	0x11, 6	; 17
+					SET_BIT(PORTD_R,6);
+ 53a:	96 9a       	sbi	0x12, 6	; 18
+ 53c:	14 c0       	rjmp	.+40     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 53e:	81 11       	cpse	r24, r1
+ 540:	12 c0       	rjmp	.+36     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,6);
+ 542:	8e 98       	cbi	0x11, 6	; 17
+ 544:	10 c0       	rjmp	.+32     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}
+				break;
+			}
+			case PD7:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+ 546:	89 81       	ldd	r24, Y+1	; 0x01
+ 548:	81 30       	cpi	r24, 0x01	; 1
+ 54a:	11 f4       	brne	.+4      	; 0x550 <__LOCK_REGION_LENGTH__+0x150>
+				{
+					SET_BIT(DDRD_R,7);
+ 54c:	8f 9a       	sbi	0x11, 7	; 17
+ 54e:	0b c0       	rjmp	.+22     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 550:	81 11       	cpse	r24, r1
+ 552:	09 c0       	rjmp	.+18     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+ 554:	8a 81       	ldd	r24, Y+2	; 0x02
+			case PD7:
+			{
+				if(astrDIOConfigParameters[i].enuPinDir==OUTPUT)
+				{
+					SET_BIT(DDRD_R,7);
+				}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 556:	81 30       	cpi	r24, 0x01	; 1
+ 558:	19 f4       	brne	.+6      	; 0x560 <__LOCK_REGION_LENGTH__+0x160>
+				(astrDIOConfigParameters[i].enuPullupResEn==PULL_UP_ENABLE))
+				{
+					CLR_BIT(DDRD_R,7);
+ 55a:	8f 98       	cbi	0x11, 7	; 17
+					SET_BIT(PORTD_R,7);
+ 55c:	97 9a       	sbi	0x12, 7	; 18
+ 55e:	03 c0       	rjmp	.+6      	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			}else if((astrDIOConfigParameters[i].enuPinDir==INPUT)&&
+ 560:	81 11       	cpse	r24, r1
+ 562:	01 c0       	rjmp	.+2      	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+			(astrDIOConfigParameters[i].enuPullupResEn==NO_CONNECTION))
+			{
+				CLR_BIT(DDRD_R,7);
+ 564:	8f 98       	cbi	0x11, 7	; 17
+ 566:	23 96       	adiw	r28, 0x03	; 3
+
+
+enuErrorStatus_t DIO_Init(void)
+{
+	uint8_t i;
+	for(i=0;i<DIO_GROUPS_NO;i++)
+ 568:	c4 17       	cp	r28, r20
+ 56a:	d5 07       	cpc	r29, r21
+ 56c:	09 f0       	breq	.+2      	; 0x570 <__LOCK_REGION_LENGTH__+0x170>
+ 56e:	db cd       	rjmp	.-1098   	; 0x126 <DIO_Init+0xc>
+				break;
+			}
+		}
+	}
+	return E_OK;
+}
+ 570:	81 e0       	ldi	r24, 0x01	; 1
+ 572:	df 91       	pop	r29
+ 574:	cf 91       	pop	r28
+ 576:	08 95       	ret
+
+00000578 <SPI_MasterInit>:
+	
+	/* Retrieve the SPDR contents */
+	*data = SPDR_R;
+	
+	return gError2;
+}
+ 578:	0e 94 8d 00 	call	0x11a	; 0x11a <DIO_Init>
+ 57c:	81 e5       	ldi	r24, 0x51	; 81
+ 57e:	8d b9       	out	0x0d, r24	; 13
+ 580:	81 e0       	ldi	r24, 0x01	; 1
+ 582:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <__data_end>
+ 586:	08 95       	ret
+
+00000588 <SPI_MasterTransmitString>:
+* Parameters (out): None
+* Return Value    : enuErrorStatus_t - For error handling
+* Description     : Function for transmitting a string
+*************************************************************/
+enuErrorStatus_t SPI_MasterTransmitString(uint8_t* pu8data)
+{
+ 588:	9c 01       	movw	r18, r24
+	if(gError2==E_ERROR)
+ 58a:	80 91 70 00 	lds	r24, 0x0070	; 0x800070 <__data_end>
+ 58e:	88 23       	and	r24, r24
+ 590:	a1 f0       	breq	.+40     	; 0x5ba <SPI_MasterTransmitString+0x32>
+	{
+		return E_ERROR; // SPI not initialized
+	}
+	gError2=E_OK;
+ 592:	81 e0       	ldi	r24, 0x01	; 1
+ 594:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <__data_end>
+ 598:	f9 01       	movw	r30, r18
+ 59a:	21 50       	subi	r18, 0x01	; 1
+ 59c:	3f 4f       	sbci	r19, 0xFF	; 255
+ 59e:	df 01       	movw	r26, r30
+		while(!GET_BIT(SPSR_R,SPIF_B));
+		i++;
+	}*/
+	for(i=0;i<MAX_LEN;i++)
+	{
+		SPDR_R = pu8data[i];
+ 5a0:	90 81       	ld	r25, Z
+ 5a2:	9f b9       	out	0x0f, r25	; 15
+		while(!GET_BIT(SPSR_R,SPIF_B));
+ 5a4:	77 9b       	sbis	0x0e, 7	; 14
+ 5a6:	fe cf       	rjmp	.-4      	; 0x5a4 <SPI_MasterTransmitString+0x1c>
+ 5a8:	31 96       	adiw	r30, 0x01	; 1
+		if(pu8data[i]=='\r')
+ 5aa:	9c 91       	ld	r25, X
+ 5ac:	9d 30       	cpi	r25, 0x0D	; 13
+ 5ae:	19 f0       	breq	.+6      	; 0x5b6 <SPI_MasterTransmitString+0x2e>
+	{
+		SPDR_R = pu8data[i];
+		while(!GET_BIT(SPSR_R,SPIF_B));
+		i++;
+	}*/
+	for(i=0;i<MAX_LEN;i++)
+ 5b0:	e2 17       	cp	r30, r18
+ 5b2:	f3 07       	cpc	r31, r19
+ 5b4:	a1 f7       	brne	.-24     	; 0x59e <SPI_MasterTransmitString+0x16>
+		if(pu8data[i]=='\r')
+		{
+			break;
+		}
+	}
+	return gError2;
+ 5b6:	80 91 70 00 	lds	r24, 0x0070	; 0x800070 <__data_end>
+}
+ 5ba:	08 95       	ret
+
+000005bc <UART_Init>:
+		{
+			break;
+		}		
+	}
+	return gError;
+}
+ 5bc:	10 bc       	out	0x20, r1	; 32
+ 5be:	83 e3       	ldi	r24, 0x33	; 51
+ 5c0:	89 b9       	out	0x09, r24	; 9
+ 5c2:	88 e1       	ldi	r24, 0x18	; 24
+ 5c4:	8a b9       	out	0x0a, r24	; 10
+ 5c6:	80 b5       	in	r24, 0x20	; 32
+ 5c8:	84 60       	ori	r24, 0x04	; 4
+ 5ca:	80 bd       	out	0x20, r24	; 32
+ 5cc:	80 b5       	in	r24, 0x20	; 32
+ 5ce:	82 60       	ori	r24, 0x02	; 2
+ 5d0:	80 bd       	out	0x20, r24	; 32
+ 5d2:	80 b5       	in	r24, 0x20	; 32
+ 5d4:	8f 7d       	andi	r24, 0xDF	; 223
+ 5d6:	80 bd       	out	0x20, r24	; 32
+ 5d8:	80 b5       	in	r24, 0x20	; 32
+ 5da:	8f 7e       	andi	r24, 0xEF	; 239
+ 5dc:	80 bd       	out	0x20, r24	; 32
+ 5de:	80 b5       	in	r24, 0x20	; 32
+ 5e0:	87 7f       	andi	r24, 0xF7	; 247
+ 5e2:	80 bd       	out	0x20, r24	; 32
+ 5e4:	81 e0       	ldi	r24, 0x01	; 1
+ 5e6:	80 93 71 00 	sts	0x0071, r24	; 0x800071 <gError>
+ 5ea:	08 95       	ret
+
+000005ec <UART_ReceiveData>:
+ 5ec:	fc 01       	movw	r30, r24
+ 5ee:	80 91 71 00 	lds	r24, 0x0071	; 0x800071 <gError>
+ 5f2:	88 23       	and	r24, r24
+ 5f4:	59 f0       	breq	.+22     	; 0x60c <UART_ReceiveData+0x20>
+ 5f6:	81 e0       	ldi	r24, 0x01	; 1
+ 5f8:	80 93 71 00 	sts	0x0071, r24	; 0x800071 <gError>
+ 5fc:	5f 9b       	sbis	0x0b, 7	; 11
+ 5fe:	fe cf       	rjmp	.-4      	; 0x5fc <UART_ReceiveData+0x10>
+ 600:	2c b1       	in	r18, 0x0c	; 12
+ 602:	30 e0       	ldi	r19, 0x00	; 0
+ 604:	31 83       	std	Z+1, r19	; 0x01
+ 606:	20 83       	st	Z, r18
+ 608:	80 91 71 00 	lds	r24, 0x0071	; 0x800071 <gError>
+ 60c:	08 95       	ret
+
+0000060e <UART_ReceiveString>:
+* Parameters (out): pu8String
+* Return Value    : enuErrorStatus_t - For error handling 
+* Description     : Sending a string with UART
+*************************************************************/
+enuErrorStatus_t UART_ReceiveString(uint8_t* pu8String,uint8_t max_length)
+{
+ 60e:	0f 93       	push	r16
+ 610:	1f 93       	push	r17
+ 612:	cf 93       	push	r28
+ 614:	df 93       	push	r29
+ 616:	8c 01       	movw	r16, r24
+	if(gError==E_ERROR)
+ 618:	80 91 71 00 	lds	r24, 0x0071	; 0x800071 <gError>
+ 61c:	88 23       	and	r24, r24
+ 61e:	d9 f0       	breq	.+54     	; 0x656 <UART_ReceiveString+0x48>
+	{
+		return E_ERROR;
+	}
+	gError=E_OK;
+ 620:	81 e0       	ldi	r24, 0x01	; 1
+ 622:	80 93 71 00 	sts	0x0071, r24	; 0x800071 <gError>
+	uint8_t i=0;
+	for(i=0;i<max_length;i++)
+ 626:	66 23       	and	r22, r22
+ 628:	a1 f0       	breq	.+40     	; 0x652 <UART_ReceiveString+0x44>
+ 62a:	c8 01       	movw	r24, r16
+ 62c:	e8 01       	movw	r28, r16
+ 62e:	61 50       	subi	r22, 0x01	; 1
+ 630:	06 2f       	mov	r16, r22
+ 632:	10 e0       	ldi	r17, 0x00	; 0
+ 634:	0f 5f       	subi	r16, 0xFF	; 255
+ 636:	1f 4f       	sbci	r17, 0xFF	; 255
+ 638:	08 0f       	add	r16, r24
+ 63a:	19 1f       	adc	r17, r25
+	{
+		UART_ReceiveData(&pu8String[i]);
+ 63c:	ce 01       	movw	r24, r28
+ 63e:	0e 94 f6 02 	call	0x5ec	; 0x5ec <UART_ReceiveData>
+		if((pu8String[i]=='\r')||(pu8String[i]=='\n'))
+ 642:	99 91       	ld	r25, Y+
+ 644:	9d 30       	cpi	r25, 0x0D	; 13
+ 646:	29 f0       	breq	.+10     	; 0x652 <UART_ReceiveString+0x44>
+ 648:	9a 30       	cpi	r25, 0x0A	; 10
+ 64a:	19 f0       	breq	.+6      	; 0x652 <UART_ReceiveString+0x44>
+	{
+		return E_ERROR;
+	}
+	gError=E_OK;
+	uint8_t i=0;
+	for(i=0;i<max_length;i++)
+ 64c:	c0 17       	cp	r28, r16
+ 64e:	d1 07       	cpc	r29, r17
+ 650:	a9 f7       	brne	.-22     	; 0x63c <UART_ReceiveString+0x2e>
+		/*if(pu8String[6]=='\r')
+		{
+			DIO_Write(4,HIGH);
+		}*/
+
+	return gError;
+ 652:	80 91 71 00 	lds	r24, 0x0071	; 0x800071 <gError>
+}
+ 656:	df 91       	pop	r29
+ 658:	cf 91       	pop	r28
+ 65a:	1f 91       	pop	r17
+ 65c:	0f 91       	pop	r16
+ 65e:	08 95       	ret
+
+00000660 <__tablejump2__>:
+ 660:	ee 0f       	add	r30, r30
+ 662:	ff 1f       	adc	r31, r31
+ 664:	05 90       	lpm	r0, Z+
+ 666:	f4 91       	lpm	r31, Z
+ 668:	e0 2d       	mov	r30, r0
+ 66a:	09 94       	ijmp
+
+0000066c <_exit>:
+ 66c:	f8 94       	cli
+
+0000066e <__stop_program>:
+ 66e:	ff cf       	rjmp	.-2      	; 0x66e <__stop_program>
