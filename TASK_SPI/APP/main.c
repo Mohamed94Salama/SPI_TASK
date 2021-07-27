@@ -25,10 +25,7 @@ int main(void)
 	{
 		
 	}
-	/*if(strlen(x1)==8)
-	{
-		DIO_Write(4,HIGH);
-	}*/
+
 	SPI_MasterTransmitString(x1);
     }
 }
